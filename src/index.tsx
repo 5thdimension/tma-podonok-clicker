@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import { mockTelegramEnv, parseInitData } from '@tma.js/sdk-react';
 
-import { Root } from '@/components/Root';
+import { Root } from '@/app/Root';
 
 import '@telegram-apps/telegram-ui/dist/styles.css';
 import './index.css';
