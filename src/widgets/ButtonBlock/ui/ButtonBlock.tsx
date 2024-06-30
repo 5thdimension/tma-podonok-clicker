@@ -1,11 +1,10 @@
-import { Button } from "@telegram-apps/telegram-ui";
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
-import firstIcon from "../../../../assets/icons/Frame 21.svg"
-import secondIcon from "../../../../assets/icons/Frame 23.png"
-import thirdIcon from "../../../../assets/icons/Frame 22.png"
-import fourthIcon from "../../../../assets/icons/Frame 24.png"
+import firstIconD from "../../../../assets/icons/Frame 21.svg"
+import secondIconL from "../../../../assets/icons/Frame 23.png"
+import thirdIconL from "../../../../assets/icons/Frame 22.png"
+import fourthIconL from "../../../../assets/icons/Frame 24.png"
 
 export const ButtonBlock: FC = () => {
     const navigate = useNavigate();
@@ -22,25 +21,26 @@ export const ButtonBlock: FC = () => {
                 background: "white",
                 textAlign: "center",
             }}>
-                <img src={firstIcon} alt="" style={{
+                <img src={firstIconD} alt="" style={{
                     margin: 5
                 }}
-                    onClick={() =>
+                    onClick={(event) =>
                         navigate("/game")
+
                     } />
-                <img src={secondIcon} alt="" style={{
+                <img src={secondIconL} alt="" style={{
                     margin: 5
                 }}
                     onClick={() =>
                         navigate("/quest")
                     } />
-                <img src={thirdIcon} alt="" style={{
+                <img src={thirdIconL} alt="" style={{
                     margin: 5
                 }}
                     onClick={() =>
                         navigate("/shop")
                     } />
-                <img src={fourthIcon} alt="" style={{
+                <img src={fourthIconL} alt="" style={{
                     margin: 5
                 }}
                     onClick={() =>
