@@ -6,6 +6,8 @@ import secondIconL from "../../../../assets/icons/Frame 23.png"
 import thirdIconL from "../../../../assets/icons/Frame 22.png"
 import fourthIconL from "../../../../assets/icons/Frame 24.png"
 
+
+
 export const ButtonBlock: FC = () => {
     const navigate = useNavigate();
     return (
@@ -24,7 +26,7 @@ export const ButtonBlock: FC = () => {
                 <img src={firstIconD} alt="" style={{
                     margin: 5
                 }}
-                    onClick={(event) =>
+                    onClick={() =>
                         navigate("/game")
 
                     } />
