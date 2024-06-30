@@ -1,6 +1,8 @@
 import { Button, Section } from '@telegram-apps/telegram-ui';
 import { useEffect, useState, type FC } from 'react';
 
+import Frame_21 from '../../../assets/icons/Frame 21.svg';
+
 
 import { Page } from '@/shared/Page/ui/Page';
 import { ButtonBlock } from '@/widgets/ButtonBlock/index';
@@ -67,18 +69,18 @@ export const GamePage: FC = () => {
             </>
           </UpScreen>
           <div style={{
-            height: "15%",
+            height: "15vh",
             textAlign: "center"
           }}>
             {counter} МОНЕТ
           </div>
           <div className="экран средний (игра)"
             style={{
-              height: "60%",
+              height: "50vh",
               textAlign: "center"
             }}>
             <Character>
-              <img src="public/assets/characters/пууппс.png" id="img1" style={{
+              <img src={Frame_21} id="img1" style={{
                 position: "absolute",
                 top: 0,
                 left: 0,
@@ -87,7 +89,7 @@ export const GamePage: FC = () => {
                 enlargeImg(event.currentTarget.id)
               }} />
 
-              <img src="public/assets/characters/малыш.png" id="img2" style={{
+              <img src="assets/characters/малыш.png" id="img2" style={{
                 top: 0,
                 left: 0,
               }} onClick={(event) => {
@@ -97,7 +99,7 @@ export const GamePage: FC = () => {
 
             </Character>
             <div>
-              <img src="public/assets/characters/миска.png" style={{
+              <img src="assets/characters/миска.png" style={{
               }} />
             </div>
           </div>
