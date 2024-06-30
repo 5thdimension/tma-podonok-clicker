@@ -102,8 +102,8 @@ export const GamePage: FC = () => {
             </div>
           </div>
         </GameScreen>
+        <ButtonBlock />
       </Section>
-      <ButtonBlock />
     </Page >
 
   );
