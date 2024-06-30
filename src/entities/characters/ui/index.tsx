@@ -5,8 +5,8 @@ export function Character({ children }: PropsWithChildrens) {
         <>
             <div
                 style={{
-                    width: 800,
-                    height: 500,
+                    width: "100vh",
+                    height: "50vh",
                     display: "inline-block",
                     position: "relative",
                 }}>

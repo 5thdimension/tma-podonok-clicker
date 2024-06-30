@@ -1,8 +1,9 @@
 import { Button, Section } from '@telegram-apps/telegram-ui';
 import { useEffect, useState, type FC } from 'react';
 
-import Frame_21 from '../../../assets/icons/Frame 21.svg';
-
+import little from '../../../assets/characters/малыш.svg';
+import pups from '../../../assets/characters/пууппс.svg';
+import miska from '../../../assets/characters/миска фул.svg';
 
 import { Page } from '@/shared/Page/ui/Page';
 import { ButtonBlock } from '@/widgets/ButtonBlock/index';
@@ -80,7 +81,7 @@ export const GamePage: FC = () => {
               textAlign: "center"
             }}>
             <Character>
-              <img src={Frame_21} id="img1" style={{
+              <img src={little} id="img1" style={{
                 position: "absolute",
                 top: 0,
                 left: 0,
@@ -89,7 +90,7 @@ export const GamePage: FC = () => {
                 enlargeImg(event.currentTarget.id)
               }} />
 
-              <img src="assets/characters/малыш.png" id="img2" style={{
+              <img src={pups} id="img2" style={{
                 top: 0,
                 left: 0,
               }} onClick={(event) => {
@@ -99,7 +100,7 @@ export const GamePage: FC = () => {
 
             </Character>
             <div>
-              <img src="assets/characters/миска.png" style={{
+              <img src={miska} style={{
               }} />
             </div>
           </div>
