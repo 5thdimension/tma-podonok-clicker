@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export const ButtonBlock: FC = () => {
     const navigate = useNavigate();
     return (
-        <div style={{ height: "5%" }}>
+        <div style={{  }}>
 
             <div style={{
                 background: "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(186,184,34,1) 67%, rgba(255,255,255,1) 100%)"
