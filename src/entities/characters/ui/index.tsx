@@ -1,14 +1,16 @@
+import { PropsWithChildrens } from "@/app/types/global";
 
-export function Character() {
+export function Character({ children }: PropsWithChildrens) {
     return (
         <>
             <div
                 style={{
-                    width: 50,
-                    height: 50,
-                    background: "red",
+                    width: 800,
+                    height: 500,
+                    display: "inline-block",
+                    position: "relative",
                 }}>
-
+                {children}
             </div >
         </>
     )

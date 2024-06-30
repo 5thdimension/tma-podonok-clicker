@@ -15,6 +15,27 @@ export const GamePage: FC = () => {
     console.log('counter changed');
   }, [counter])
 
+  // Function to increase image size
+  function enlargeImg(id: string) {
+    const img = document.getElementById(id);
+    // Set image size to 1.5 times original
+    if (img) {
+      img.style.transform = "scale(1.3)";
+      // Animation effect
+      img.style.transition = "transform 0.25s ease";
+    }
+    setTimeout(() => resetImg(id), 300);
+  }
+  // // Function to reset image size
+  function resetImg(id: string) {
+    const img = document.getElementById(id);
+    // Set image size to original
+    if (img) {
+      img.style.transform = "scale(1)";
+      img.style.transition = "transform 0.25s ease";
+    }
+  }
+
   return (
     <Page>
       <Section
@@ -52,14 +73,33 @@ export const GamePage: FC = () => {
             {counter} МОНЕТ
           </div>
           <div className="экран средний (игра)"
-            onClick={() => {
-              setCounter(counter + 1)
-            }}
             style={{
               height: "60%",
               textAlign: "center"
             }}>
-            <Character />
+            <Character>
+              <img src="public/assets/characters/пууппс.png" id="img1" style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+              }} onClick={(event) => {
+                setCounter(counter + 1)
+                enlargeImg(event.currentTarget.id)
+              }} />
+
+              <img src="public/assets/characters/малыш.png" id="img2" style={{
+                top: 0,
+                left: 0,
+              }} onClick={(event) => {
+                setCounter(counter + 1);
+                enlargeImg(event.currentTarget.id)
+              }} />
+
+            </Character>
+            <div>
+              <img src="public/assets/characters/миска.png" style={{
+              }} />
+            </div>
           </div>
         </GameScreen>
       </Section>
