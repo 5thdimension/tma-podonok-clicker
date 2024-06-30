@@ -2,9 +2,9 @@ import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
 import firstIconD from "../../../../assets/icons/Frame 21.svg"
-import secondIconL from "../../../../assets/icons/Frame 23.png"
-import thirdIconL from "../../../../assets/icons/Frame 22.png"
-import fourthIconL from "../../../../assets/icons/Frame 24.png"
+import secondIconL from "../../../../assets/icons/Frame 23.svg"
+import thirdIconL from "../../../../assets/icons/Frame 22.svg"
+import fourthIconL from "../../../../assets/icons/Frame 24.svg"
 
 
 
