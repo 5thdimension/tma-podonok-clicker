@@ -1,5 +1,5 @@
 import { Button, Section } from '@telegram-apps/telegram-ui';
-import { useEffect, useState, type FC } from 'react';
+import { useState, type FC } from 'react';
 
 import little from '../../../assets/characters/малыш.svg';
 import pups from '../../../assets/characters/пууппс.svg';
@@ -13,10 +13,6 @@ import { GameScreen } from '@/shared/GameScreen';
 
 export const GamePage: FC = () => {
   const [counter, setCounter] = useState(0);
-
-  useEffect(() => {
-    console.log('counter changed');
-  }, [counter])
 
   // Function to increase image size
   function enlargeImg(id: string) {
@@ -70,7 +66,7 @@ export const GamePage: FC = () => {
             </>
           </UpScreen>
           <div style={{
-            height: "15vh",
+            height: "10vh",
             textAlign: "center"
           }}>
             {counter} МОНЕТ
@@ -83,16 +79,16 @@ export const GamePage: FC = () => {
             <Character>
               <img src={pups} id="img1" style={{
                 position: "absolute",
-                top: 0,
-                left: 0,
+                top: "30%",
+                left: "10%",
               }} onClick={(event) => {
                 setCounter(counter + 1)
                 enlargeImg(event.currentTarget.id)
               }} />
 
               <img src={little} id="img2" style={{
-                top: 0,
-                left: 0,
+                position: "absolute",
+                top: "10%",
               }} onClick={(event) => {
                 setCounter(counter + 1);
                 enlargeImg(event.currentTarget.id)
@@ -101,6 +97,8 @@ export const GamePage: FC = () => {
             </Character>
             <div>
               <img src={miska} style={{
+                position: "absolute",
+                bottom: "8%",
               }} />
             </div>
           </div>

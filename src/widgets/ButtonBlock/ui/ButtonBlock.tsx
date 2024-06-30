@@ -1,14 +1,18 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import firstIconD from "../../../../assets/icons/Frame 21.svg"
-import secondIconL from "../../../../assets/icons/Frame 23.svg"
-import thirdIconL from "../../../../assets/icons/Frame 22.svg"
+import secondIconL from "../../../../assets/icons/Frame 23l.svg"
+import thirdIconL from "../../../../assets/icons/Frame 22l.svg"
 import fourthIconL from "../../../../assets/icons/Frame 24.svg"
 
+import firstIconL from "../../../../assets/icons/Frame 21l.svg"
+import secondIconD from "../../../../assets/icons/Frame 23d.svg"
+import thirdIconD from "../../../../assets/icons/Frame 22d.svg"
 
 
 export const ButtonBlock: FC = () => {
+    const [ligter, setLighter] = useState(0);
     const navigate = useNavigate();
     return (
         <div style={{}}>
@@ -23,30 +27,38 @@ export const ButtonBlock: FC = () => {
                 background: "white",
                 textAlign: "center",
             }}>
-                <img src={firstIconD} alt="" style={{
+                <img src={ligter == 1 ? firstIconD : firstIconL} alt="" style={{
                     margin: 5
                 }}
-                    onClick={() =>
+                    onClick={() => {
                         navigate("/game")
-
+                        setLighter(1)
+                        console.log(ligter)
+                    }
                     } />
-                <img src={secondIconL} alt="" style={{
+                <img src={ligter == 2 ? secondIconD : secondIconL} alt="" style={{
                     margin: 5
                 }}
-                    onClick={() =>
+                    onClick={() => {
                         navigate("/quest")
+                        setLighter(2)
+                        console.log(ligter)
+                    }
                     } />
-                <img src={thirdIconL} alt="" style={{
+                <img src={ligter == 3 ? thirdIconD : thirdIconL} alt="" style={{
                     margin: 5
                 }}
-                    onClick={() =>
+                    onClick={() => {
                         navigate("/shop")
+                        setLighter(3)
+                        console.log(ligter)
+                    }
                     } />
                 <img src={fourthIconL} alt="" style={{
                     margin: 5
                 }}
                     onClick={() =>
-                        navigate("/game")
+                        navigate("/")
                     } />
             </div >
         </div>

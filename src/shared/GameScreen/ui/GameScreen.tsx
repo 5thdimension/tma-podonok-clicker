@@ -9,7 +9,7 @@ export interface GameScreenProps extends PropsWithChildren {
 export const GameScreen: FC<GameScreenProps> = ({ children, backgroundColor}) => (
   <div className="экран общий"
     style={{
-      height: "90vh",
+      height: "85vh",
       background: backgroundColor || "black",
       textAlign: "center"
     }}>
