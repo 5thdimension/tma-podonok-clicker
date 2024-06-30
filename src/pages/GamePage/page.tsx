@@ -77,11 +77,11 @@ export const GamePage: FC = () => {
           </div>
           <div className="экран средний (игра)"
             style={{
-              height: "50vh",
+              height: "40vh",
               textAlign: "center"
             }}>
             <Character>
-              <img src={little} id="img1" style={{
+              <img src={pups} id="img1" style={{
                 position: "absolute",
                 top: 0,
                 left: 0,
@@ -90,7 +90,7 @@ export const GamePage: FC = () => {
                 enlargeImg(event.currentTarget.id)
               }} />
 
-              <img src={pups} id="img2" style={{
+              <img src={little} id="img2" style={{
                 top: 0,
                 left: 0,
               }} onClick={(event) => {
